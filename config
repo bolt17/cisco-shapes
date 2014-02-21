@@ -1,0 +1,35 @@
+class-map match-all <NAME>
+  match access-group name <NAME>
+class-map match-all <NAME>
+  match access-group name <NAME>
+class-map match-all <NAME>
+  match access-group name <NAME>
+class-map match-all <NAME>
+  match access-group name <NAME>
+!
+!
+policy-map <NAME>
+  class <NAME>
+   police cir 40000000
+     conform-action transmit
+     exceed-action drop
+policy-map <NAME>
+  class <NAME>
+   police cir 40000000
+     conform-action transmit
+     exceed-action drop
+policy-map DRM
+  class <NAME>
+   police cir 1000000
+     conform-action transmit
+     exceed-action drop
+policy-map <NAME>
+  class <NAME>
+   police cir 40000000
+     conform-action transmit
+     exceed-action drop
+
+
+
+On interface:
+service-policy input <NAME>
